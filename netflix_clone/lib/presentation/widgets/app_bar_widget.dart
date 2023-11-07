@@ -21,13 +21,7 @@ class AppBarWidget extends StatelessWidget {
 
  const Icon(Icons.cast,color: Colors.white,size: 25,),
  kwidth,
-  Container(
-        width: 25,
-        height: 25,
-        color: Colors.white,
-  ),
-  kwidth
-
+  
  ],    ),
       ],
     );

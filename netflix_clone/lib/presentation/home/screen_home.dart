@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:netflix_clone/controller/now_playing/now_playing.dart';
+import 'package:netflix_clone/models/now_playing/now_playing.dart';
 import 'package:netflix_clone/presentation/home/widgets/background_card.dart';
 import 'package:netflix_clone/presentation/home/widgets/number_title_card.dart';
 import '../../controller/popular/popular.dart';
@@ -25,10 +27,12 @@ class _ScreenHomeState extends State<ScreenHome> {
  List<TopRated> topRated = [];
   List<Popular> popular = [];
   List<Upcoming> upcoming = [];
+  List<NowPlaying> newplaying =[];
   Future getAllMovies() async {
     topRated = await getTopRatedMovies();
     popular = await getAllPopular();
     upcoming = await getAllUpcoming();
+    newplaying = await getAllNowPlaying();
     // ignore: avoid_print
     print(upcoming.length);
     setState(() {});
@@ -61,17 +65,17 @@ class _ScreenHomeState extends State<ScreenHome> {
               ListView(
                 children:  [
                 const  Backgroundcard(),
-                  MainTitleCard( movies: topRated,
+                  MainTitleCard( movies:upcoming,
                     titletext: 'Released in the past year',
                   ),
                   MainTitleCard(movies: popular,
                     titletext: 'Trending Now',
                   ),
                   NumberTitleCard(upcoming: upcoming,),
-                  MainTitleCard(movies: popular,
+                  MainTitleCard(movies: topRated,
                     titletext: 'Tense Dreams',
                   ),
-                  MainTitleCard(movies: upcoming,
+                  MainTitleCard(movies: popular,
                     titletext: 'South Indian Cinema',
                   ),
                 ],
@@ -99,12 +103,8 @@ class _ScreenHomeState extends State<ScreenHome> {
                                 size: 25,
                               ),
                               kwidth,
-                              Container(
-                                width: 25,
-                                height: 25,
-                                color: Colors.white,
-                              ),
-                              kwidth10
+                              
+                           
                             ],
                           ),
                          const Row(children: [SizedBox(height: 27,)],),

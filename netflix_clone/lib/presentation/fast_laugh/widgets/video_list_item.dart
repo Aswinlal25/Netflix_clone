@@ -171,7 +171,7 @@ List<String> videoPathList = [
   "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
 ];
 
-String imageUrl = 'URL_TO_YOUR_IMAGE'; // Provide the URL of your image here
+String imageUrl = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yNySAgpAnWmPpYinim9E0tUzJWG.jpg'; 
 
 void main() {
   runApp(MaterialApp(

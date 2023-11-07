@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_clone/controller/upcoming/upcoming_service.dart';
 import 'package:netflix_clone/models/top_rated/top_rated.dart';
 import 'package:netflix_clone/presentation/new_hot/coming_soon_widget.dart';
 import 'package:netflix_clone/presentation/new_hot/everyones_watching_widget.dart';
 import '../../controller/top_rated/top_rated_services.dart';
-import '../../controller/upcoming/upcoming_service.dart';
 import '../../core/colors/colors.dart';
 import '../../core/colors/constans.dart';
 import '../../models/upcaming/upcoming.dart';
@@ -44,17 +44,11 @@ class _ScreenNewHotState extends State<ScreenNewHot> {
               backgroundColor: kblack,
               title: const Text('New & Hot',
                   style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold)),
-              actions: [
-                const Icon(
+              actions:const [
+                 Icon(
                   Icons.cast,
                   color: Colors.white,
                   size: 25,
-                ),
-                kwidth,
-                Container(
-                  width: 20,
-                  height: 20,
-                  color: Colors.white,
                 ),
                 kwidth
               ],

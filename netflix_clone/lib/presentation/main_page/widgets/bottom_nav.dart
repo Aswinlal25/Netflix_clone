@@ -22,11 +22,11 @@ class BottomNavigationWidget extends StatelessWidget {
       selectedIconTheme:const IconThemeData(color:Colors.white),
       unselectedIconTheme:const IconThemeData(color: Colors.grey),
       items: const [
-      BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: 'Home'),
-      BottomNavigationBarItem(icon: Icon(Icons.collections_outlined), label: 'New & Hot'),
-      BottomNavigationBarItem(icon: Icon(Icons.emoji_emotions_outlined), label: 'Fast & Laughs'),
-      BottomNavigationBarItem(icon: Icon(CupertinoIcons.search), label: 'Search'),
-      BottomNavigationBarItem(icon: Icon(Icons.download_for_offline_rounded), label: 'Downloads'),
+      BottomNavigationBarItem(icon: Icon(Icons.home_filled,size: 27), label: 'Home'),
+      BottomNavigationBarItem(icon: Icon(Icons.video_collection,size: 27), label: 'New & Hot'),
+      BottomNavigationBarItem(icon: Icon(Icons.emoji_emotions_outlined,size: 27), label: 'Fast & Laughs'),
+      BottomNavigationBarItem(icon: Icon(CupertinoIcons.search,size: 27,), label: 'Search'),
+      BottomNavigationBarItem(icon: Icon(Icons.download_outlined,size: 27), label: 'Downloads'),
     ]);
     });
   }

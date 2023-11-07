@@ -4,6 +4,7 @@ import '../../../core/colors/constans.dart';
 import '../../../models/upcaming/upcoming.dart';
 import '../../widgets/main_title.dart';
 
+// ignore: must_be_immutable
 class NumberTitleCard extends StatelessWidget {
    NumberTitleCard({ super.key,required this.upcoming});
 
