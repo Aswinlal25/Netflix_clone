@@ -25,8 +25,8 @@ class MainTitleCard extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           children: List.generate(
               movies.length,
-              (index) =>  Padding(
-                    padding:const EdgeInsets.symmetric(horizontal: 5),
+              (index) => Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 5),
                     child: MainCard(image: imageBase + movies[index].imagePath),
                   )),
         ),

@@ -23,11 +23,10 @@ class ScreenHome extends StatefulWidget {
 }
 
 class _ScreenHomeState extends State<ScreenHome> {
-
- List<TopRated> topRated = [];
+  List<TopRated> topRated = [];
   List<Popular> popular = [];
   List<Upcoming> upcoming = [];
-  List<NowPlaying> newplaying =[];
+  List<NowPlaying> newplaying = [];
   Future getAllMovies() async {
     topRated = await getTopRatedMovies();
     popular = await getAllPopular();
@@ -63,31 +62,38 @@ class _ScreenHomeState extends State<ScreenHome> {
           child: Stack(
             children: [
               ListView(
-                children:  [
-                const  Backgroundcard(),
-                  MainTitleCard( movies:upcoming,
+                children: [
+                  const Backgroundcard(),
+                  MainTitleCard(
+                    movies: upcoming,
                     titletext: 'Released in the past year',
                   ),
-                  MainTitleCard(movies: popular,
+                  MainTitleCard(
+                    movies: popular,
                     titletext: 'Trending Now',
                   ),
-                  NumberTitleCard(upcoming: upcoming,),
-                  MainTitleCard(movies: topRated,
+                  NumberTitleCard(
+                    upcoming: upcoming,
+                  ),
+                  MainTitleCard(
+                    movies: topRated,
                     titletext: 'Tense Dreams',
                   ),
-                  MainTitleCard(movies: popular,
+                  MainTitleCard(
+                    movies: popular,
                     titletext: 'South Indian Cinema',
                   ),
                 ],
               ),
               scrolNotifier.value == true
                   ? AnimatedContainer(
-                    duration: const Duration(microseconds: 1000),
+                      duration: const Duration(microseconds: 1000),
                       width: double.infinity,
                       height: 135,
                       color: Colors.black.withOpacity(0.1),
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 10,right: 10,top: 30),
+                        padding:
+                            const EdgeInsets.only(left: 10, right: 10, top: 30),
                         child: Column(children: [
                           Row(
                             children: [
@@ -103,17 +109,30 @@ class _ScreenHomeState extends State<ScreenHome> {
                                 size: 25,
                               ),
                               kwidth,
-                              
-                           
                             ],
                           ),
-                         const Row(children: [SizedBox(height: 27,)],),
+                          const Row(
+                            children: [
+                              SizedBox(
+                                height: 27,
+                              )
+                            ],
+                          ),
                           const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text('TV Shows',style: TextStyle(fontWeight: FontWeight.bold),),
-                              Text('Movies',style: TextStyle(fontWeight: FontWeight.bold),),
-                              Text('Categores',style: TextStyle(fontWeight: FontWeight.bold),)
+                              Text(
+                                'TV Shows',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                'Movies',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                'Categores',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              )
                             ],
                           )
                         ]),

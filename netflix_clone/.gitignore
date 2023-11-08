@@ -44,5 +44,5 @@ app.*.map.json
 /android/app/release
 
 # Apikey here
-key_file.dart
+netflix_clone\lib\Api_key
 

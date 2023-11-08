@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
 import 'package:netflix_clone/Api_key/key_file.dart';
 import 'package:netflix_clone/models/now_playing/now_playing.dart';

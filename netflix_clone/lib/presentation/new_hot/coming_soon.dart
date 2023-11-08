@@ -98,7 +98,6 @@ class ComingSoon extends StatelessWidget {
                       )
                     ],
                   ),
-                  
                   kheight,
                   Text(
                     topRated.title,
@@ -111,7 +110,6 @@ class ComingSoon extends StatelessWidget {
                       style: const TextStyle(color: Colors.grey),
                     ),
                   ),
-                  
                 ],
               ),
             ),

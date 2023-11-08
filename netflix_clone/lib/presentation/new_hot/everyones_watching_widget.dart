@@ -5,9 +5,7 @@ import '../../models/upcaming/upcoming.dart';
 
 // ignore: must_be_immutable
 class EveryonesWatchingWidget extends StatelessWidget {
-   EveryonesWatchingWidget({
-    super.key,required this.everyone
-  });
+  EveryonesWatchingWidget({super.key, required this.everyone});
 
   List<Upcoming> everyone;
 
@@ -16,7 +14,7 @@ class EveryonesWatchingWidget extends StatelessWidget {
     return ListView.builder(
         itemCount: 30,
         itemBuilder: (BuildContext context, index) {
-          return  EveryonesWatching(upcoming: everyone[index]);
+          return EveryonesWatching(upcoming: everyone[index]);
         });
   }
 }

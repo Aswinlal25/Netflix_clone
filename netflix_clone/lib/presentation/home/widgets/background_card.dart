@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/presentation/home/widgets/custom_button_widget.dart';
-
 import '../../../core/colors/colors.dart';
 import '../../../core/colors/constans.dart';
 
@@ -17,9 +16,7 @@ class Backgroundcard extends StatelessWidget {
           width: double.infinity,
           height: 730,
           decoration: const BoxDecoration(
-              image: DecorationImage(
-                  image: NetworkImage(mainImg
-                      ))),
+              image: DecorationImage(image: NetworkImage(mainImg))),
         ),
         Positioned(
           bottom: 0,

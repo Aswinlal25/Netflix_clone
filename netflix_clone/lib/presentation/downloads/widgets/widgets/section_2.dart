@@ -13,8 +13,7 @@ class Section2 extends StatefulWidget {
 }
 
 class _Section2State extends State<Section2> {
-
-   List<TopRated> downloadImages = [];
+  List<TopRated> downloadImages = [];
   Future getAllMovies() async {
     downloadImages = await getTopRatedMovies();
     setState(() {});
@@ -26,13 +25,12 @@ class _Section2State extends State<Section2> {
     'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qVKirUdmoex8SdfUk8WDDWwrcCh.jpg',
   ];
 
- @override
+  @override
   void initState() {
     getAllMovies();
     super.initState();
   }
 
-  
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -64,18 +62,18 @@ class _Section2State extends State<Section2> {
             ),
             DownloadsImageWidget(
               imageList: imageList[0],
-              margin:const EdgeInsets.only(left: 150, bottom: 40),
+              margin: const EdgeInsets.only(left: 150, bottom: 40),
               angle: 20,
               size: Size(size.width * 0.40, size.width * 0.51),
             ),
             DownloadsImageWidget(
                 imageList: imageList[2],
-                margin:const EdgeInsets.only(right: 150, bottom: 40),
+                margin: const EdgeInsets.only(right: 150, bottom: 40),
                 angle: -20,
                 size: Size(size.width * 0.40, size.width * 0.51)),
             DownloadsImageWidget(
               imageList: imageList[1],
-              margin:const EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 left: 0,
               ),
               size: Size(size.width * 0.43, size.width * 0.59),

@@ -16,8 +16,7 @@ class ScreenNewHot extends StatefulWidget {
 }
 
 class _ScreenNewHotState extends State<ScreenNewHot> {
-
- List<TopRated> comingMovies = [];
+  List<TopRated> comingMovies = [];
   List<Upcoming> everyOne = [];
 
   Future getAllMovies() async {
@@ -32,7 +31,6 @@ class _ScreenNewHotState extends State<ScreenNewHot> {
     super.initState();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -44,8 +42,8 @@ class _ScreenNewHotState extends State<ScreenNewHot> {
               backgroundColor: kblack,
               title: const Text('New & Hot',
                   style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold)),
-              actions:const [
-                 Icon(
+              actions: const [
+                Icon(
                   Icons.cast,
                   color: Colors.white,
                   size: 25,
@@ -78,10 +76,3 @@ class _ScreenNewHotState extends State<ScreenNewHot> {
     );
   }
 }
-
-
-
-
-
-
-  

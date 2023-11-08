@@ -8,7 +8,11 @@ import '../../../core/colors/constans.dart';
 class ScreenDownload extends StatelessWidget {
   ScreenDownload({super.key});
 
-  final _widgetList = [const _SmartDownloads(), const Section2(), const Section3()];
+  final _widgetList = [
+    const _SmartDownloads(),
+    const Section2(),
+    const Section3()
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -20,15 +24,14 @@ class ScreenDownload extends StatelessWidget {
               title: "Downloads",
             ))),
         body: ListView.separated(
-          padding:const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             itemBuilder: (ctx, index) => _widgetList[index],
-            separatorBuilder: (ctx, index) =>const SizedBox(
+            separatorBuilder: (ctx, index) => const SizedBox(
                   height: 20,
                 ),
             itemCount: _widgetList.length));
   }
 }
-
 
 class _SmartDownloads extends StatelessWidget {
   const _SmartDownloads({
@@ -45,9 +48,11 @@ class _SmartDownloads extends StatelessWidget {
           color: kwhite,
         ),
         kwidth10,
-        Text('Smart Downloads',style: TextStyle(fontWeight: FontWeight.bold),)
+        Text(
+          'Smart Downloads',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        )
       ],
     );
   }
 }
-

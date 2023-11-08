@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/presentation/search/widgets/search_result.dart';
-
 import '../../controller/popular/popular.dart';
 import '../../core/colors/colors.dart';
 import '../../core/colors/constans.dart';
@@ -16,8 +15,7 @@ class ScreenSearch extends StatefulWidget {
 }
 
 class _ScreenSearchState extends State<ScreenSearch> {
-
- final _controller = TextEditingController();
+  final _controller = TextEditingController();
   List<Popular> popular = [];
   bool isTaped = true;
   Future getPopular() async {
@@ -32,20 +30,26 @@ class _ScreenSearchState extends State<ScreenSearch> {
     super.initState();
   }
 
-
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      body: SafeArea(child: Padding(
+    return Scaffold(
+      body: SafeArea(
+          child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CupertinoSearchTextField(
               backgroundColor: Colors.grey.withOpacity(0.3),
-              prefixIcon:const Icon(CupertinoIcons.search,color: Colors.grey,),
-              suffixIcon:const Icon(CupertinoIcons.xmark_circle_fill,color: Colors.grey,),
-              style:const TextStyle(color: kwhite),
-
+              prefixIcon: const Icon(
+                CupertinoIcons.search,
+                color: Colors.grey,
+              ),
+              suffixIcon: const Icon(
+                CupertinoIcons.xmark_circle_fill,
+                color: Colors.grey,
+              ),
+              style: const TextStyle(color: kwhite),
               onChanged: (value) {
                 setState(() {
                   value.isEmpty ? isTaped = true : isTaped = false;
@@ -53,16 +57,14 @@ class _ScreenSearchState extends State<ScreenSearch> {
               },
             ),
             kheight,
-             _isEmpty(_controller.text),
-            // Expanded(child: ScreenIdleWidget())
-//                         Expanded(child: SearchResult()
-// )
+            _isEmpty(_controller.text),
           ],
         ),
       )),
     );
   }
-   Widget _isEmpty(String value) {
+
+  Widget _isEmpty(String value) {
     return isTaped
         ? Expanded(child: ScreenIdleWidget(popular: popular))
         : const Expanded(child: SearchResult());

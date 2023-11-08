@@ -4,7 +4,8 @@ import '../../../core/colors/colors.dart';
 import '../../../core/colors/constans.dart';
 
 class TopSearchIthemTile extends StatelessWidget {
-  const TopSearchIthemTile({super.key, required this.url, required this.movieName});
+  const TopSearchIthemTile(
+      {super.key, required this.url, required this.movieName});
 
   final String url;
   final String movieName;
@@ -17,11 +18,12 @@ class TopSearchIthemTile extends StatelessWidget {
         Container(
           width: screenWidth * 0.35,
           height: 75,
-          decoration:  BoxDecoration(
-              image: DecorationImage(fit: BoxFit.cover, image: NetworkImage(imageBase + url))),
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover, image: NetworkImage(imageBase + url))),
         ),
         kwidth10,
-         Expanded(
+        Expanded(
             child: Text(
           movieName,
           style: TextStyle(fontWeight: FontWeight.bold),

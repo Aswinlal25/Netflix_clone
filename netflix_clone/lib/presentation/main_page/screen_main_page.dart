@@ -9,24 +9,25 @@ import 'package:netflix_clone/presentation/search/screen_search.dart';
 import '../../core/colors/colors.dart';
 
 class ScreenMainPage extends StatelessWidget {
-   ScreenMainPage({super.key});
-
+  ScreenMainPage({super.key});
 
   final _pages = [
-     const ScreenHome(),
-     const ScreenNewHot(),
-     const ScreenFastLaugh(),
-     const ScreenSearch(),
-      ScreenDownload()
+    const ScreenHome(),
+    const ScreenNewHot(),
+    const ScreenFastLaugh(),
+    const ScreenSearch(),
+    ScreenDownload()
   ];
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      backgroundColor:  backgroundcolor,
-      body: ValueListenableBuilder(valueListenable: indexChangeNotifier, builder: (context , index ,_){
-        return  _pages[index] ;
-      }),
+    return Scaffold(
+      backgroundColor: backgroundcolor,
+      body: ValueListenableBuilder(
+          valueListenable: indexChangeNotifier,
+          builder: (context, index, _) {
+            return _pages[index];
+          }),
       bottomNavigationBar: BottomNavigationWidget(),
     );
   }

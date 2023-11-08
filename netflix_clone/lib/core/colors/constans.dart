@@ -24,7 +24,7 @@ const coming =
 const everyones =
     'https://www.themoviedb.org/t/p/w355_and_h200_multi_faces/bZGAX8oMDm3Mo5i0ZPKh9G2OcaO.jpg';
 
-//
+
 const textStyleHomeTitle = TextStyle(fontWeight: FontWeight.bold, fontSize: 16);
 
 String imageBase = 'https://image.tmdb.org/t/p/w500/';

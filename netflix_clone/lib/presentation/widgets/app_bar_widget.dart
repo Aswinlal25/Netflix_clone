@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../core/colors/constans.dart';
 
 class AppBarWidget extends StatelessWidget {
@@ -8,21 +7,31 @@ class AppBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       children: [
-       const Row(children: [SizedBox(width:100,height: 30,)],),
+        const Row(
+          children: [
+            SizedBox(
+              width: 100,
+              height: 30,
+            )
+          ],
+        ),
         Row(
-
- children: [
-  kwidth,
-  Text(
-        title,style: const TextStyle(fontSize: 26,fontWeight: FontWeight.bold)),
-  const Spacer(),
-
- const Icon(Icons.cast,color: Colors.white,size: 25,),
- kwidth,
-  
- ],    ),
+          children: [
+            kwidth,
+            Text(title,
+                style:
+                    const TextStyle(fontSize: 26, fontWeight: FontWeight.bold)),
+            const Spacer(),
+            const Icon(
+              Icons.cast,
+              color: Colors.white,
+              size: 25,
+            ),
+            kwidth,
+          ],
+        ),
       ],
     );
   }

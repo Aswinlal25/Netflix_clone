@@ -5,7 +5,7 @@ import 'package:video_player/video_player.dart';
 
 class VideoListItem extends StatefulWidget {
   final int index;
-    final String videoUrl;
+  final String videoUrl;
   const VideoListItem({super.key, required this.index, required this.videoUrl});
 
   @override
@@ -13,12 +13,11 @@ class VideoListItem extends StatefulWidget {
 }
 
 class _VideoListItemState extends State<VideoListItem> {
-
-   late VideoPlayerController _videoPlayerController;
+  late VideoPlayerController _videoPlayerController;
   bool isVolume = true;
   bool isPlay = true;
 
- @override
+  @override
   void initState() {
     super.initState();
     videoController(videoPath: videoPathList[widget.index]);
@@ -60,7 +59,7 @@ class _VideoListItemState extends State<VideoListItem> {
                   ? AspectRatio(
                       aspectRatio: _videoPlayerController.value.aspectRatio,
                       child: VideoPlayer(_videoPlayerController))
-                  :const Center(child:  CircularProgressIndicator()),
+                  : const Center(child: CircularProgressIndicator()),
             ),
             Positioned(
               child: Padding(
@@ -72,7 +71,6 @@ class _VideoListItemState extends State<VideoListItem> {
                     // Left side
                     CircleAvatar(
                       radius: 30,
-                      
                       backgroundColor: Colors.black.withOpacity(.8),
                       child: IconButton(
                           onPressed: () {
@@ -86,8 +84,8 @@ class _VideoListItemState extends State<VideoListItem> {
                             }
                           },
                           icon: isVolume
-                              ? const Icon (CupertinoIcons.volume_up)
-                              :const Icon(CupertinoIcons.speaker_slash_fill)),
+                              ? const Icon(CupertinoIcons.volume_up)
+                              : const Icon(CupertinoIcons.speaker_slash_fill)),
                     ),
 
                     // Right side
@@ -98,9 +96,10 @@ class _VideoListItemState extends State<VideoListItem> {
                           radius: 30,
                           backgroundImage: NetworkImage(imageUrl),
                         ),
-                       const VideoActions( icon: Icons.emoji_emotions, title: 'Lol'),
-                       const VideoActions(icon: Icons.add, title: 'Add List'),
-                       const VideoActions(icon: Icons.share, title: 'Share'),
+                        const VideoActions(
+                            icon: Icons.emoji_emotions, title: 'Lol'),
+                        const VideoActions(icon: Icons.add, title: 'Add List'),
+                        const VideoActions(icon: Icons.share, title: 'Share'),
                         VideoActions(
                             icon: !isPlay
                                 ? CupertinoIcons.play_circle
@@ -132,7 +131,8 @@ class VideoActions extends StatelessWidget {
   final String title;
   final Function()? onPress;
 
-  const VideoActions({super.key, required this.icon, required this.title, this.onPress});
+  const VideoActions(
+      {super.key, required this.icon, required this.title, this.onPress});
 
   @override
   Widget build(BuildContext context) {
@@ -171,7 +171,8 @@ List<String> videoPathList = [
   "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
 ];
 
-String imageUrl = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yNySAgpAnWmPpYinim9E0tUzJWG.jpg'; 
+String imageUrl =
+    'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yNySAgpAnWmPpYinim9E0tUzJWG.jpg';
 
 void main() {
   runApp(MaterialApp(
